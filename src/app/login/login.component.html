@@ -1,0 +1,20 @@
+<div class="col-md-6 col-md-offset-3">
+  <h2>Login</h2>
+  <form name="form" (ngSubmit)="login()" #f="ngForm" novalidate>
+          <div class="row">
+          <label for="username">Username</label>
+          <input type="text" class="form-control" name="username" [(ngModel)]="username" required />
+          </div>
+          <br/>
+          <div class="row">          <label for="password">Password</label>
+          <input type="password" class="form-control" name="password" [(ngModel)]="password" required />
+        </div>
+        <br/>
+        <div class="row">
+          <div class="form-group">
+          <button [disabled]="loading" class="btn btn-primary">Login</button>
+      </div>
+    </div>
+      <div *ngIf="error" class="alert alert-danger">{{error}}</div>
+  </form>
+</div>
